@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import Alamofire
 
 final class AlbumsListViewController: UIViewController {
     @IBOutlet private weak var albumsTableView: UITableView!
@@ -27,7 +26,6 @@ final class AlbumsListViewController: UIViewController {
         albumsTableView.delegate = self
         
         navigationItem.title = TextConstants.navigationAlbumTitle
-        
         
         getAllAlbums()
     }

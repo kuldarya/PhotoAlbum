@@ -8,12 +8,53 @@
 import UIKit
 
 class PhotosViewController: UIViewController {
+    @IBOutlet private weak var photosCollectionView: UICollectionView! {
+        didSet {
+            photosCollectionView.reloadData()
+        }
+    }
+    
+    private let photoAPIClient = PhotoAPIClient()
     
     var album: Album?
+    var photos = [Photo]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        photosCollectionView.dataSource = self
+        photosCollectionView.delegate = self
     }
+    
+    private func getAllPhotos() {
+        photoAPIClient.fetchAllPhotos { [weak self] result in
+                guard let self = self else { return }
+                
+                switch result {
+                case .success(let photos):
+                    guard let album = self.album else { return }
+                    let filteredPhotos = photos.filter { $0.albumId == album.id }
 
+                    self.photos = filteredPhotos
+                case .failure(let error):
+                    assertionFailure(error.localizedDescription)
+            }
+        }
+    }
+}
+
+extension PhotosViewController: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        photos.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        <#code#>
+    }
+    
+    
+}
+
+extension PhotosViewController: UICollectionViewDelegate {
+    
 }

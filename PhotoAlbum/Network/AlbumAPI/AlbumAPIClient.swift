@@ -10,7 +10,7 @@ import Alamofire
 
 final class AlbumAPIClient {
     func fetchAllAlbums(completion: @escaping (Result<[Album]>) -> Void) {
-        APIClient.fetch(route: AlbumAPIRouter.getAll) { (result: Result<[Album]>) in
+        APIClient.fetch(route: APIRouter.getAllAlbums) { (result: Result<[Album]>) in
             switch result {
             case .success(let albums):
                 completion(.success(albums))

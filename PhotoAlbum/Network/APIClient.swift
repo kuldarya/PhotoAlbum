@@ -35,10 +35,10 @@ class APIClient {
                 return
             }
             do {
-                let album = try JSONDecoder().decode(T.self, from: data)
+                let data = try JSONDecoder().decode(T.self, from: data)
                 
                 DispatchQueue.main.async {
-                    completion(.success(album))
+                    completion(.success(data))
                 }
             } catch {
                 DispatchQueue.main.async {

@@ -21,10 +21,12 @@
 		4BF3151525C2AB72000E3BF3 /* TextConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF3151425C2AB72000E3BF3 /* TextConstants.swift */; };
 		4BF3152325C2B4F3000E3BF3 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF3152225C2B4F3000E3BF3 /* NetworkError.swift */; };
 		4BF3152825C2C568000E3BF3 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF3152725C2C568000E3BF3 /* Router.swift */; };
-		4BF3152C25C2C5F0000E3BF3 /* AlbumAPIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF3152B25C2C5F0000E3BF3 /* AlbumAPIRouter.swift */; };
+		4BF3152C25C2C5F0000E3BF3 /* APIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF3152B25C2C5F0000E3BF3 /* APIRouter.swift */; };
 		4BF3152F25C2C72C000E3BF3 /* AlbumAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF3152E25C2C72C000E3BF3 /* AlbumAPIClient.swift */; };
 		4BF3154A25C32320000E3BF3 /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF3154925C32320000E3BF3 /* PhotosViewController.swift */; };
 		4BF3155A25C323EE000E3BF3 /* StoryBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF3155925C323EE000E3BF3 /* StoryBoard.swift */; };
+		4BF3156C25C330CA000E3BF3 /* PhotoAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF3156B25C330CA000E3BF3 /* PhotoAPIClient.swift */; };
+		4BF3156F25C3311D000E3BF3 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF3156E25C3311D000E3BF3 /* Photo.swift */; };
 		EE24849AD524EA30072972E4 /* libPods-PhotoAlbum.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 12ED210D09897F92CCE1FABB /* libPods-PhotoAlbum.a */; };
 /* End PBXBuildFile section */
 
@@ -46,10 +48,12 @@
 		4BF3151425C2AB72000E3BF3 /* TextConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextConstants.swift; sourceTree = "<group>"; };
 		4BF3152225C2B4F3000E3BF3 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		4BF3152725C2C568000E3BF3 /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
-		4BF3152B25C2C5F0000E3BF3 /* AlbumAPIRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumAPIRouter.swift; sourceTree = "<group>"; };
+		4BF3152B25C2C5F0000E3BF3 /* APIRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRouter.swift; sourceTree = "<group>"; };
 		4BF3152E25C2C72C000E3BF3 /* AlbumAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumAPIClient.swift; sourceTree = "<group>"; };
 		4BF3154925C32320000E3BF3 /* PhotosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
 		4BF3155925C323EE000E3BF3 /* StoryBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryBoard.swift; sourceTree = "<group>"; };
+		4BF3156B25C330CA000E3BF3 /* PhotoAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoAPIClient.swift; sourceTree = "<group>"; };
+		4BF3156E25C3311D000E3BF3 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		6A785BC81AF312185C233D7B /* Pods-PhotoAlbum.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoAlbum.release.xcconfig"; path = "Target Support Files/Pods-PhotoAlbum/Pods-PhotoAlbum.release.xcconfig"; sourceTree = "<group>"; };
 		84213A03134DAB9D242D683B /* Pods-PhotoAlbum.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoAlbum.debug.xcconfig"; path = "Target Support Files/Pods-PhotoAlbum/Pods-PhotoAlbum.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -107,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				4BF314FA25C2A154000E3BF3 /* Album.swift */,
+				4BF3156E25C3311D000E3BF3 /* Photo.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -124,9 +129,11 @@
 			isa = PBXGroup;
 			children = (
 				4BF314F725C2A11A000E3BF3 /* APIClient.swift */,
+				4BF3152B25C2C5F0000E3BF3 /* APIRouter.swift */,
 				4BF3152725C2C568000E3BF3 /* Router.swift */,
 				4BF3152225C2B4F3000E3BF3 /* NetworkError.swift */,
 				4BF3152A25C2C5D8000E3BF3 /* AlbumAPI */,
+				4BF3156925C32F15000E3BF3 /* PhotoAPI */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -152,10 +159,17 @@
 		4BF3152A25C2C5D8000E3BF3 /* AlbumAPI */ = {
 			isa = PBXGroup;
 			children = (
-				4BF3152B25C2C5F0000E3BF3 /* AlbumAPIRouter.swift */,
 				4BF3152E25C2C72C000E3BF3 /* AlbumAPIClient.swift */,
 			);
 			path = AlbumAPI;
+			sourceTree = "<group>";
+		};
+		4BF3156925C32F15000E3BF3 /* PhotoAPI */ = {
+			isa = PBXGroup;
+			children = (
+				4BF3156B25C330CA000E3BF3 /* PhotoAPIClient.swift */,
+			);
+			path = PhotoAPI;
 			sourceTree = "<group>";
 		};
 		C1916C761D175E89AC313220 /* Frameworks */ = {
@@ -273,6 +287,7 @@
 			files = (
 				4BF3152825C2C568000E3BF3 /* Router.swift in Sources */,
 				4BF314F825C2A11A000E3BF3 /* APIClient.swift in Sources */,
+				4BF3156C25C330CA000E3BF3 /* PhotoAPIClient.swift in Sources */,
 				4B8B064425C1BDDC00E7C9E9 /* AlbumsListViewController.swift in Sources */,
 				4B8B064025C1BDDC00E7C9E9 /* AppDelegate.swift in Sources */,
 				4BF3150E25C2A4F9000E3BF3 /* NSObject.swift in Sources */,
@@ -280,11 +295,12 @@
 				4B8B064225C1BDDC00E7C9E9 /* SceneDelegate.swift in Sources */,
 				4BF314FB25C2A154000E3BF3 /* Album.swift in Sources */,
 				4BF3152F25C2C72C000E3BF3 /* AlbumAPIClient.swift in Sources */,
+				4BF3156F25C3311D000E3BF3 /* Photo.swift in Sources */,
 				4BF3151225C2AAE9000E3BF3 /* String.swift in Sources */,
 				4BF3155A25C323EE000E3BF3 /* StoryBoard.swift in Sources */,
 				4BF3150A25C2A47D000E3BF3 /* AlbumCell.swift in Sources */,
 				4BF3154A25C32320000E3BF3 /* PhotosViewController.swift in Sources */,
-				4BF3152C25C2C5F0000E3BF3 /* AlbumAPIRouter.swift in Sources */,
+				4BF3152C25C2C5F0000E3BF3 /* APIRouter.swift in Sources */,
 				4BF3152325C2B4F3000E3BF3 /* NetworkError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
