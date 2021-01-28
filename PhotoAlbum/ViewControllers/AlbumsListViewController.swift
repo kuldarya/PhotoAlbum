@@ -47,7 +47,6 @@ final class AlbumsListViewController: UIViewController {
 }
 
 extension AlbumsListViewController: UITableViewDataSource {
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return albums.count
     }
@@ -63,6 +62,13 @@ extension AlbumsListViewController: UITableViewDataSource {
 }
 
 extension AlbumsListViewController: UITableViewDelegate {
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let albumPhotosViewController = UIStoryboard.mainStoryboard?.instantiateViewController(PhotosViewController.self) else {
+            assertionFailure("PhotosViewController could not be instantiated")
+            return
+        }
+        albumPhotosViewController.album = albums[indexPath.item]
+        navigationController?.pushViewController(albumPhotosViewController, animated: true)
+    }
 }
 

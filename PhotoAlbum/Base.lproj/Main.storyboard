@@ -69,6 +69,21 @@
             </objects>
             <point key="canvasLocation" x="108.69565217391305" y="-14.0625"/>
         </scene>
+        <!--Photos View Controller-->
+        <scene sceneID="CR8-gj-aQC">
+            <objects>
+                <viewController storyboardIdentifier="PhotosViewController" id="Vf9-Wf-hay" customClass="PhotosViewController" customModule="PhotoAlbum" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="06X-15-4a8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="bZm-Za-iiD"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uu7-NU-88o" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="935" y="-14"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="66u-pw-ROQ">
             <objects>
