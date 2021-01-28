@@ -15,8 +15,7 @@ final class AlbumsListViewController: UIViewController {
     
     var albums = [Album]() {
         didSet {
-            print("in didSet: \(albums.count)")
-            
+            albums.sort { $0.title < $1.title }
             albumsTableView.reloadData()
         }
     }
@@ -24,15 +23,13 @@ final class AlbumsListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        albumsTableView.delegate = self
+        albumsTableView.dataSource = self
         albumsTableView.delegate = self
         
         navigationItem.title = TextConstants.navigationAlbumTitle
         
-        getAllAlbums()
-        print("in viewDidLoad: \(albums.count)")
         
-        print("var albums: \(albums.count)")
+        getAllAlbums()
     }
     
      private func getAllAlbums() {
@@ -42,7 +39,6 @@ final class AlbumsListViewController: UIViewController {
             switch result {
             case .success(let albums):
                 self.albums = albums
-                print("in completion: \(self.albums.count)")
             case .failure(let error):
                 assertionFailure(error.localizedDescription)
             }
@@ -51,17 +47,17 @@ final class AlbumsListViewController: UIViewController {
 }
 
 extension AlbumsListViewController: UITableViewDataSource {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return albums.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "AlbumCell", for: indexPath) as? AlbumCell else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: AlbumCell.className, for: indexPath) as? AlbumCell else {
             assertionFailure("AlbumCell was not initialized properly")
             return UITableViewCell()
         }
         cell.album = albums[indexPath.item]
-        print("In DATA SOURCE: \(albums[indexPath.item])")
         return cell
     }
 }

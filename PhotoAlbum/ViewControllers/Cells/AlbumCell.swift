@@ -12,7 +12,7 @@ final class AlbumCell: UITableViewCell {
     
     var album: Album? {
         didSet {
-            albumTitleLabel.text = album?.title
+            albumTitleLabel.text = album?.title.capitalizingFirstLetter()
         }
     }
 }
