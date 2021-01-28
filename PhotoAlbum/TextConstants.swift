@@ -7,6 +7,8 @@
 
 import Foundation
 
-final class TextConstants {
+struct TextConstants {
     static let navigationAlbumTitle = "List of Albums"
+    
+    static let basePath = "https://jsonplaceholder.typicode.com"
 }

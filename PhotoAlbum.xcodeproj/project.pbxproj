@@ -13,15 +13,21 @@
 		4B8B064725C1BDDC00E7C9E9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B8B064525C1BDDC00E7C9E9 /* Main.storyboard */; };
 		4B8B064925C1BDE600E7C9E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B8B064825C1BDE600E7C9E9 /* Assets.xcassets */; };
 		4B8B064C25C1BDE600E7C9E9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B8B064A25C1BDE600E7C9E9 /* LaunchScreen.storyboard */; };
-		4BF314F825C2A11A000E3BF3 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF314F725C2A11A000E3BF3 /* NetworkManager.swift */; };
+		4BF314F825C2A11A000E3BF3 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF314F725C2A11A000E3BF3 /* APIClient.swift */; };
 		4BF314FB25C2A154000E3BF3 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF314FA25C2A154000E3BF3 /* Album.swift */; };
 		4BF3150A25C2A47D000E3BF3 /* AlbumCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF3150925C2A47D000E3BF3 /* AlbumCell.swift */; };
 		4BF3150E25C2A4F9000E3BF3 /* NSObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF3150D25C2A4F9000E3BF3 /* NSObject.swift */; };
 		4BF3151225C2AAE9000E3BF3 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF3151125C2AAE9000E3BF3 /* String.swift */; };
 		4BF3151525C2AB72000E3BF3 /* TextConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF3151425C2AB72000E3BF3 /* TextConstants.swift */; };
+		4BF3152325C2B4F3000E3BF3 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF3152225C2B4F3000E3BF3 /* NetworkError.swift */; };
+		4BF3152825C2C568000E3BF3 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF3152725C2C568000E3BF3 /* Router.swift */; };
+		4BF3152C25C2C5F0000E3BF3 /* AlbumAPIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF3152B25C2C5F0000E3BF3 /* AlbumAPIRouter.swift */; };
+		4BF3152F25C2C72C000E3BF3 /* AlbumAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF3152E25C2C72C000E3BF3 /* AlbumAPIClient.swift */; };
+		EE24849AD524EA30072972E4 /* libPods-PhotoAlbum.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 12ED210D09897F92CCE1FABB /* libPods-PhotoAlbum.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		12ED210D09897F92CCE1FABB /* libPods-PhotoAlbum.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PhotoAlbum.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B8B063C25C1BDDC00E7C9E9 /* PhotoAlbum.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoAlbum.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B8B063F25C1BDDC00E7C9E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4B8B064125C1BDDC00E7C9E9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -30,12 +36,18 @@
 		4B8B064825C1BDE600E7C9E9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4B8B064B25C1BDE600E7C9E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4B8B064D25C1BDE600E7C9E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4BF314F725C2A11A000E3BF3 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		4BF314F725C2A11A000E3BF3 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		4BF314FA25C2A154000E3BF3 /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
 		4BF3150925C2A47D000E3BF3 /* AlbumCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumCell.swift; sourceTree = "<group>"; };
 		4BF3150D25C2A4F9000E3BF3 /* NSObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSObject.swift; sourceTree = "<group>"; };
 		4BF3151125C2AAE9000E3BF3 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		4BF3151425C2AB72000E3BF3 /* TextConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextConstants.swift; sourceTree = "<group>"; };
+		4BF3152225C2B4F3000E3BF3 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		4BF3152725C2C568000E3BF3 /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		4BF3152B25C2C5F0000E3BF3 /* AlbumAPIRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumAPIRouter.swift; sourceTree = "<group>"; };
+		4BF3152E25C2C72C000E3BF3 /* AlbumAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumAPIClient.swift; sourceTree = "<group>"; };
+		6A785BC81AF312185C233D7B /* Pods-PhotoAlbum.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoAlbum.release.xcconfig"; path = "Target Support Files/Pods-PhotoAlbum/Pods-PhotoAlbum.release.xcconfig"; sourceTree = "<group>"; };
+		84213A03134DAB9D242D683B /* Pods-PhotoAlbum.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoAlbum.debug.xcconfig"; path = "Target Support Files/Pods-PhotoAlbum/Pods-PhotoAlbum.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE24849AD524EA30072972E4 /* libPods-PhotoAlbum.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,6 +67,8 @@
 			children = (
 				4B8B063E25C1BDDC00E7C9E9 /* PhotoAlbum */,
 				4B8B063D25C1BDDC00E7C9E9 /* Products */,
+				DE5A1729EADD3A7F144445B3 /* Pods */,
+				C1916C761D175E89AC313220 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -72,7 +87,7 @@
 				4B8B064125C1BDDC00E7C9E9 /* SceneDelegate.swift */,
 				4BF314FE25C2A172000E3BF3 /* ViewControllers */,
 				4BF314FD25C2A159000E3BF3 /* Models */,
-				4BF314FF25C2A18A000E3BF3 /* Managers */,
+				4BF314FF25C2A18A000E3BF3 /* Network */,
 				4BF3150C25C2A4DC000E3BF3 /* Extensions */,
 				4BF3151425C2AB72000E3BF3 /* TextConstants.swift */,
 				4B8B064525C1BDDC00E7C9E9 /* Main.storyboard */,
@@ -100,12 +115,15 @@
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
-		4BF314FF25C2A18A000E3BF3 /* Managers */ = {
+		4BF314FF25C2A18A000E3BF3 /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				4BF314F725C2A11A000E3BF3 /* NetworkManager.swift */,
+				4BF314F725C2A11A000E3BF3 /* APIClient.swift */,
+				4BF3152725C2C568000E3BF3 /* Router.swift */,
+				4BF3152225C2B4F3000E3BF3 /* NetworkError.swift */,
+				4BF3152A25C2C5D8000E3BF3 /* AlbumAPI */,
 			);
-			path = Managers;
+			path = Network;
 			sourceTree = "<group>";
 		};
 		4BF3150825C2A466000E3BF3 /* Cells */ = {
@@ -125,6 +143,33 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		4BF3152A25C2C5D8000E3BF3 /* AlbumAPI */ = {
+			isa = PBXGroup;
+			children = (
+				4BF3152B25C2C5F0000E3BF3 /* AlbumAPIRouter.swift */,
+				4BF3152E25C2C72C000E3BF3 /* AlbumAPIClient.swift */,
+			);
+			path = AlbumAPI;
+			sourceTree = "<group>";
+		};
+		C1916C761D175E89AC313220 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				12ED210D09897F92CCE1FABB /* libPods-PhotoAlbum.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DE5A1729EADD3A7F144445B3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				84213A03134DAB9D242D683B /* Pods-PhotoAlbum.debug.xcconfig */,
+				6A785BC81AF312185C233D7B /* Pods-PhotoAlbum.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,6 +177,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4B8B065025C1BDE600E7C9E9 /* Build configuration list for PBXNativeTarget "PhotoAlbum" */;
 			buildPhases = (
+				54E4C7EB7337D033C60D70D3 /* [CP] Check Pods Manifest.lock */,
 				4B8B063825C1BDDC00E7C9E9 /* Sources */,
 				4B8B063925C1BDDC00E7C9E9 /* Frameworks */,
 				4B8B063A25C1BDDC00E7C9E9 /* Resources */,
@@ -190,20 +236,49 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		54E4C7EB7337D033C60D70D3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PhotoAlbum-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		4B8B063825C1BDDC00E7C9E9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4BF314F825C2A11A000E3BF3 /* NetworkManager.swift in Sources */,
+				4BF3152825C2C568000E3BF3 /* Router.swift in Sources */,
+				4BF314F825C2A11A000E3BF3 /* APIClient.swift in Sources */,
 				4B8B064425C1BDDC00E7C9E9 /* AlbumsListViewController.swift in Sources */,
 				4B8B064025C1BDDC00E7C9E9 /* AppDelegate.swift in Sources */,
 				4BF3150E25C2A4F9000E3BF3 /* NSObject.swift in Sources */,
 				4BF3151525C2AB72000E3BF3 /* TextConstants.swift in Sources */,
 				4B8B064225C1BDDC00E7C9E9 /* SceneDelegate.swift in Sources */,
 				4BF314FB25C2A154000E3BF3 /* Album.swift in Sources */,
+				4BF3152F25C2C72C000E3BF3 /* AlbumAPIClient.swift in Sources */,
 				4BF3151225C2AAE9000E3BF3 /* String.swift in Sources */,
 				4BF3150A25C2A47D000E3BF3 /* AlbumCell.swift in Sources */,
+				4BF3152C25C2C5F0000E3BF3 /* AlbumAPIRouter.swift in Sources */,
+				4BF3152325C2B4F3000E3BF3 /* NetworkError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -349,6 +424,7 @@
 		};
 		4B8B065125C1BDE600E7C9E9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 84213A03134DAB9D242D683B /* Pods-PhotoAlbum.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -368,6 +444,7 @@
 		};
 		4B8B065225C1BDE600E7C9E9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6A785BC81AF312185C233D7B /* Pods-PhotoAlbum.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

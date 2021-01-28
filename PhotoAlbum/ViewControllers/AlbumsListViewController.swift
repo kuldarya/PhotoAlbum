@@ -6,19 +6,35 @@
 //
 
 import UIKit
+import Alamofire
 
 final class AlbumsListViewController: UIViewController {
     @IBOutlet private weak var albumsTableView: UITableView!
     
+    private let albumAPIClient = AlbumAPIClient()
     private var albums = [Album]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         navigationItem.title = TextConstants.navigationAlbumTitle
-        
         albumsTableView.delegate = self
         albumsTableView.reloadData()
+        
+        getAllAlbums()
+    }
+    
+    private func getAllAlbums() {
+        albumAPIClient.fetchAllAlbums { [weak self] result in
+            guard let self = self else { return }
+            
+            switch result{
+            case .success(let albums):
+                self.albums = albums
+            case .failure(let error):
+                assertionFailure(error.localizedDescription)
+            }
+        }
     }
 }
 
@@ -32,6 +48,7 @@ extension AlbumsListViewController: UITableViewDataSource {
             assertionFailure("AlbumCell was not initialized properly")
             return UITableViewCell()
         }
+        
         cell.album = albums[indexPath.row]
         return cell
     }
