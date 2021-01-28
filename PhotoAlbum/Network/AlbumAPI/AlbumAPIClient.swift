@@ -9,11 +9,10 @@ import Foundation
 import Alamofire
 
 final class AlbumAPIClient {
-    func fetchAllAlbums(completion: @escaping (Result<[Album], Error>) -> Void) {
-        APIClient.fetch(route: AlbumAPIRouter.getAll) { (result: Result<[String: [Album]], Error>) in
+    func fetchAllAlbums(completion: @escaping (Result<[Album]>) -> Void) {
+        APIClient.fetch(route: AlbumAPIRouter.getAll) { (result: Result<[Album]>) in
             switch result {
-            case .success(let dict):
-                let albums = dict["albums"] ?? []
+            case .success(let albums):
                 completion(.success(albums))
             case .failure(let error):
                 completion(.failure(error))

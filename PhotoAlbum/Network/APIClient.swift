@@ -16,18 +16,16 @@ class APIClient {
         return URLSession.init(configuration: config)
     }()
             
-    class func fetch<T: Decodable>(route: Router, completion: @escaping (Result<T, Error>) -> Void) {
+    class func fetch<T: Decodable>(route: Router, completion: @escaping (Result<T>) -> Void) {
         APIClient.session.dataTask(with: route.asURL()) { (data, response, error) in
             
             if let error = error as NSError? {
                 let networkError = NetworkError(errorCode: error.code)
-                
                 DispatchQueue.main.async {
                     completion(.failure(networkError))
                 }
                 return
             }
-            
             guard let data = data, error == nil else {
                 if let error = error {
                     DispatchQueue.main.async {
@@ -36,10 +34,8 @@ class APIClient {
                 }
                 return
             }
-            
             do {
-                let decoder = JSONDecoder()
-                let album = try decoder.decode(T.self, from: data)
+                let album = try JSONDecoder().decode(T.self, from: data)
                 
                 DispatchQueue.main.async {
                     completion(.success(album))
@@ -49,6 +45,6 @@ class APIClient {
                     completion(.failure(error))
                 }
             }
-        }
+        }.resume()
     }
 }
