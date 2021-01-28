@@ -13,6 +13,12 @@
 		4B8B064725C1BDDC00E7C9E9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B8B064525C1BDDC00E7C9E9 /* Main.storyboard */; };
 		4B8B064925C1BDE600E7C9E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B8B064825C1BDE600E7C9E9 /* Assets.xcassets */; };
 		4B8B064C25C1BDE600E7C9E9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B8B064A25C1BDE600E7C9E9 /* LaunchScreen.storyboard */; };
+		4BF314F825C2A11A000E3BF3 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF314F725C2A11A000E3BF3 /* NetworkManager.swift */; };
+		4BF314FB25C2A154000E3BF3 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF314FA25C2A154000E3BF3 /* Album.swift */; };
+		4BF3150A25C2A47D000E3BF3 /* AlbumCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF3150925C2A47D000E3BF3 /* AlbumCell.swift */; };
+		4BF3150E25C2A4F9000E3BF3 /* NSObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF3150D25C2A4F9000E3BF3 /* NSObject.swift */; };
+		4BF3151225C2AAE9000E3BF3 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF3151125C2AAE9000E3BF3 /* String.swift */; };
+		4BF3151525C2AB72000E3BF3 /* TextConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF3151425C2AB72000E3BF3 /* TextConstants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +30,12 @@
 		4B8B064825C1BDE600E7C9E9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4B8B064B25C1BDE600E7C9E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4B8B064D25C1BDE600E7C9E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4BF314F725C2A11A000E3BF3 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		4BF314FA25C2A154000E3BF3 /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
+		4BF3150925C2A47D000E3BF3 /* AlbumCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumCell.swift; sourceTree = "<group>"; };
+		4BF3150D25C2A4F9000E3BF3 /* NSObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSObject.swift; sourceTree = "<group>"; };
+		4BF3151125C2AAE9000E3BF3 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		4BF3151425C2AB72000E3BF3 /* TextConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextConstants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,13 +70,59 @@
 			children = (
 				4B8B063F25C1BDDC00E7C9E9 /* AppDelegate.swift */,
 				4B8B064125C1BDDC00E7C9E9 /* SceneDelegate.swift */,
-				4B8B064325C1BDDC00E7C9E9 /* AlbumsListViewController.swift */,
+				4BF314FE25C2A172000E3BF3 /* ViewControllers */,
+				4BF314FD25C2A159000E3BF3 /* Models */,
+				4BF314FF25C2A18A000E3BF3 /* Managers */,
+				4BF3150C25C2A4DC000E3BF3 /* Extensions */,
+				4BF3151425C2AB72000E3BF3 /* TextConstants.swift */,
 				4B8B064525C1BDDC00E7C9E9 /* Main.storyboard */,
 				4B8B064825C1BDE600E7C9E9 /* Assets.xcassets */,
 				4B8B064A25C1BDE600E7C9E9 /* LaunchScreen.storyboard */,
 				4B8B064D25C1BDE600E7C9E9 /* Info.plist */,
 			);
 			path = PhotoAlbum;
+			sourceTree = "<group>";
+		};
+		4BF314FD25C2A159000E3BF3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4BF314FA25C2A154000E3BF3 /* Album.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		4BF314FE25C2A172000E3BF3 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				4BF3150825C2A466000E3BF3 /* Cells */,
+				4B8B064325C1BDDC00E7C9E9 /* AlbumsListViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		4BF314FF25C2A18A000E3BF3 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				4BF314F725C2A11A000E3BF3 /* NetworkManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		4BF3150825C2A466000E3BF3 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				4BF3150925C2A47D000E3BF3 /* AlbumCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		4BF3150C25C2A4DC000E3BF3 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				4BF3150D25C2A4F9000E3BF3 /* NSObject.swift */,
+				4BF3151125C2AAE9000E3BF3 /* String.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,9 +195,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4BF314F825C2A11A000E3BF3 /* NetworkManager.swift in Sources */,
 				4B8B064425C1BDDC00E7C9E9 /* AlbumsListViewController.swift in Sources */,
 				4B8B064025C1BDDC00E7C9E9 /* AppDelegate.swift in Sources */,
+				4BF3150E25C2A4F9000E3BF3 /* NSObject.swift in Sources */,
+				4BF3151525C2AB72000E3BF3 /* TextConstants.swift in Sources */,
 				4B8B064225C1BDDC00E7C9E9 /* SceneDelegate.swift in Sources */,
+				4BF314FB25C2A154000E3BF3 /* Album.swift in Sources */,
+				4BF3151225C2AAE9000E3BF3 /* String.swift in Sources */,
+				4BF3150A25C2A47D000E3BF3 /* AlbumCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -217,6 +281,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -272,6 +337,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
