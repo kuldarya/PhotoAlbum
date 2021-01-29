@@ -8,22 +8,24 @@
 import UIKit
 
 class PhotosViewController: UIViewController {
-    @IBOutlet private weak var photosCollectionView: UICollectionView! {
-        didSet {
-            photosCollectionView.reloadData()
-        }
-    }
+    @IBOutlet private weak var photosCollectionView: UICollectionView!
     
     private let photoAPIClient = PhotoAPIClient()
     
     var album: Album?
-    var photos = [Photo]()
+    var photos = [Photo]() {
+        didSet {
+            photosCollectionView.reloadData()
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         photosCollectionView.dataSource = self
         photosCollectionView.delegate = self
+        
+        getAllPhotos()
     }
     
     private func getAllPhotos() {
@@ -49,12 +51,18 @@ extension PhotosViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        <#code#>
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PhotoCell.className, for: indexPath) as? PhotoCell else {
+            assertionFailure("PhotoCell was not initialized properly")
+            return UICollectionViewCell()
+        }
+        cell.photo = photos[indexPath.item]
+        return cell
     }
-    
-    
 }
 
 extension PhotosViewController: UICollectionViewDelegate {
     
 }
+
+
+
