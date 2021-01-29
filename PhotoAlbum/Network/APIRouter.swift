@@ -1,5 +1,5 @@
 //
-//  AlbumAPIRouter.swift
+//  APIRouter.swift
 //  PhotoAlbum
 //
 //  Created by Darya Kuliashova on 28.01.21.
@@ -7,13 +7,16 @@
 
 import Foundation
 
-enum AlbumAPIRouter: Router {
-    case getAll
+enum APIRouter: Router {
+    case getAllAlbums
+    case getAllPhotos
     
     var path: String {
         switch self {
-        case .getAll:
+        case .getAllAlbums:
             return "/albums"
+        case .getAllPhotos:
+            return "/photos"
         }
     }
     
