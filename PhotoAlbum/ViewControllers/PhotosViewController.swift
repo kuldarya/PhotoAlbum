@@ -25,6 +25,8 @@ class PhotosViewController: UIViewController {
         photosCollectionView.dataSource = self
         photosCollectionView.delegate = self
         
+        navigationItem.title = TextConstants.navigationPhotosTitle
+        
         getAllPhotos()
     }
     
@@ -61,7 +63,21 @@ extension PhotosViewController: UICollectionViewDataSource {
 }
 
 extension PhotosViewController: UICollectionViewDelegate {
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let photoDetailsViewController = UIStoryboard.mainStoryboard?.instantiateViewController(PhotoDetailsViewController.self) else {
+            assertionFailure("PhotoDetailsViewController could not be instantiated")
+            return
+        }
+        photoDetailsViewController.photo = photos[indexPath.item]
+    }
+}
+
+extension PhotosViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let padding: CGFloat = 10
+        let collectionCellSize = collectionView.frame.size.width - padding
+        return CGSize(width: collectionCellSize, height: collectionCellSize)
+    }
 }
 
 

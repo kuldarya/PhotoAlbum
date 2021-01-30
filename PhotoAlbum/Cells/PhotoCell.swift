@@ -8,12 +8,22 @@
 import UIKit
 
 class PhotoCell: UICollectionViewCell {
-    @IBOutlet private weak var photoImageView: UIImageView!
     @IBOutlet private weak var photoTitleLabel: UILabel!
-    
+    @IBOutlet private weak var photoImageView: UIImageView!
+        
     var photo: Photo? {
         didSet {
-            photoTitleLabel.text = photo?.title
+            if let photo = photo {
+                photoTitleLabel.text = photo.title
+                getPhotos()
+            }
+        }
+    }
+
+    private func getPhotos() {
+        if let photo = photo,
+           let url = URL(string: photo.thumbnailUrl) {
+            photoImageView.load(url: url)
         }
     }
 }
