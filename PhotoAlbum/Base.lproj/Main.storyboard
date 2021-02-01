@@ -120,7 +120,6 @@
                                         <connections>
                                             <outlet property="photoImageView" destination="SB3-Ie-YeT" id="aeM-YA-j4s"/>
                                             <outlet property="photoTitleLabel" destination="gos-fX-geY" id="MWp-W1-3Kd"/>
-                                            <segue destination="rwz-PP-bho" kind="presentation" id="FZa-Hw-gdM"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -148,11 +147,11 @@
             <objects>
                 <viewController storyboardIdentifier="PhotoDetailsViewController" id="pgZ-YY-sBX" customClass="PhotoDetailsViewController" customModule="PhotoAlbum" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nso-st-EO2">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0sg-dQ-4gs">
-                                <rect key="frame" x="20" y="234" width="374" height="374"/>
+                                <rect key="frame" x="20" y="261" width="374" height="374"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="0sg-dQ-4gs" secondAttribute="height" multiplier="1:1" id="OmE-cB-gFd"/>
                                 </constraints>
@@ -175,12 +174,12 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="photoImageView" destination="0sg-dQ-4gs" id="0PH-Sl-dva"/>
+                        <outlet property="photoImageView" destination="0sg-dQ-4gs" id="R3r-XN-rWh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TOT-r8-AJY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2576.811594202899" y="-14.0625"/>
+            <point key="canvasLocation" x="1642" y="-14"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="66u-pw-ROQ">
@@ -199,24 +198,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xsO-7E-dzM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-801.44927536231887" y="-14.0625"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="ATu-lQ-U3T">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="rwz-PP-bho" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="m9d-7G-hFp">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="pgZ-YY-sBX" kind="relationship" relationship="rootViewController" id="dup-Jh-9og"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ytw-1J-oPt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1666.6666666666667" y="-14.0625"/>
         </scene>
     </scenes>
     <resources>
