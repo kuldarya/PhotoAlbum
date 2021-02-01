@@ -69,6 +69,7 @@ extension PhotosViewController: UICollectionViewDelegate {
             return
         }
         photoDetailsViewController.photo = photos[indexPath.item]
+        navigationController?.pushViewController(photoDetailsViewController, animated: true)
     }
 }
 
